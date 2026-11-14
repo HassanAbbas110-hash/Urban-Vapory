@@ -461,3 +461,29 @@ h2 .script{text-shadow:0 0 18px rgba(0,216,132,.35)}
 .card .ph::after{background:linear-gradient(105deg,transparent 35%,rgba(0,216,132,.22) 50%,transparent 65%)}
 .btn-line:hover{border-color:var(--red-hi);color:var(--red-hi)}
 @media (prefers-reduced-motion:reduce){.hero h1 .script,.intro .frame .ph{animation:none}}
+
+/* Urban Vapory restyle: rounded type that matches the logo, green-black floor, neon details */
+@font-face{font-family:'Righteous';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/righteous-400.woff2) format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/outfit.woff2) format('woff2')}
+:root{
+  --head:"Righteous","Arial Rounded MT Bold",system-ui,sans-serif; --body:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --bg:#090c0b; --panel:#101614; --panel2:#16201c; --line:#22302a; --ink:#ecf6f1; --mute:#98a9a1; --dim:#7d8c85;
+  --paper:#0e1a15; --paper-ink:#ecf6f1; --paper-mute:#a3bcb0; --paper-line:#21392e; --r:20px;
+}
+body{background:radial-gradient(circle at 1px 1px,rgba(0,216,132,.07) 1px,transparent 0) 0 0/26px 26px,var(--bg)}
+h1,h2,h3,h4{font-weight:400;letter-spacing:-.01em}
+h1,h2{text-transform:none}
+h1{font-size:clamp(44px,7.4vw,84px);line-height:1.02}
+.script{font-family:var(--head);color:var(--red-hi);text-shadow:0 0 14px rgba(0,216,132,.45)}
+.strip{background:#06100c;color:var(--red-hi);border-bottom:1px solid var(--line);font-weight:500;letter-spacing:.03em}
+header.hdr{background:rgba(9,12,11,.82)}
+.tag{display:inline-flex;align-items:center;gap:8px;width:fit-content;padding:5px 12px 5px 10px;border:1px solid rgba(0,216,132,.35);border-radius:999px;background:rgba(0,216,132,.08);font-size:11px;letter-spacing:.12em}
+.tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red-hi);box-shadow:0 0 8px var(--red-hi);flex:none}
+.sec-head .tag{display:inline-flex}
+.btn-red,.btn-red:hover{color:#03130c}
+.paper{background:linear-gradient(180deg,#0e1a15,#0a1310);border-block:1px solid var(--paper-line)}
+.paper .tag{color:var(--red-hi)}
+.paper .btn-line{border-color:rgba(255,255,255,.25);color:var(--ink)}
+.paper .btn-line:hover{border-color:var(--red-hi);color:var(--red-hi)}
+.paper .way{background:var(--panel)}
+.marquee.alt{background:var(--red);color:#03130c}

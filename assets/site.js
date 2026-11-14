@@ -358,8 +358,8 @@ function communityHtml() {
       <a class="soc fb rv" href="${fbLink()}" target="_blank" rel="noopener"><svg class="logo-i" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6.5c0-.8.5-1 1-1h2V2h-3c-3 0-4 2-4 4.2V8H8v3.5h2V22h4V11.5h2.8l.4-3.5H14Z"/></svg>
         <div><h4>Facebook</h4><span>Specials and shop news</span></div><div class="go">${I.out}</div></a>
     </div></div>
-  <div class="club rv"><div><h3>The Cloud <span class="script">Club</span></h3><p>First word on new flavours, restocks and weekend specials, straight to your WhatsApp. Leave any time.</p></div>
-    <a class="btn btn-red" href="${wa("Hi Urban Vapory! Please add me to the Cloud Club for new drops and specials.")}" target="_blank" rel="noopener">${I.wa} Join on WhatsApp</a></div>`;
+  <div class="club rv"><div><h3>Good Vibes <span class="script">List</span></h3><p>First word on new flavours, restocks and weekend specials, straight to your WhatsApp. Leave any time.</p></div>
+    <a class="btn btn-red" href="${wa("Hi Urban Vapory! Please add me to the Good Vibes List for new drops and specials.")}" target="_blank" rel="noopener">${I.wa} Join on WhatsApp</a></div>`;
 }
 function rate(b) {
   const box = b.closest(".rev"), n = +b.dataset.s, go = $(".rev-go", box);
