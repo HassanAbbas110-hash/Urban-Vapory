@@ -10,8 +10,8 @@ const CONFIG = {
   onlineStore: "",
   instagram: "",  // TODO: paste the shop's Instagram profile link
   facebook: "",   // TODO: paste the shop's Facebook page link
-  partnerName: "", // delivery partner shown as a 3rd way to get an order; "" hides every partner card, button and sentence
-  partnerUrl: ""          // TODO: the shop's page on the partner's site
+  partnerName: "7Waves", // delivery partner shown as a 3rd way to get an order; "" hides every partner card, button and sentence
+  partnerUrl: "https://waves-pink-kappa.vercel.app/shop"  // shortcut: 7Waves home shop list until Urban Vapory is listed; then use https://waves-pink-kappa.vercel.app/shop?store=<store id>
 };
 const DETAIL_SHARDS = 40; // must match SHARDS in tools/snapshot.py
 
@@ -207,7 +207,7 @@ function chromeTop() {
   document.body.insertAdjacentHTML("afterbegin", `
   <a class="sr" href="#main">Skip to content</a>
   <div class="progress" aria-hidden="true"></div>
-  <div class="strip"><div class="wrap"><span>Ask us about delivery${CONFIG.partnerName ? " &middot; Fast local delivery with " + CONFIG.partnerName : ""}</span><span>Shop at Jan Smuts Ville, Boksburg · ${CONFIG.hoursNote}</span><span>Strictly 18+</span></div></div>
+  <div class="strip"><div class="wrap"><span>${CONFIG.partnerName ? "Delivered in under 60 min with " + CONFIG.partnerName : "Ask us about delivery"}</span><span>Shop at Jan Smuts Ville, Boksburg · ${CONFIG.hoursNote}</span><span>Strictly 18+</span></div></div>
   <header class="hdr"><div class="wrap hdr-in">
     <a class="logo" href="index.html" aria-label="The Urban Vapory home"><img src="assets/img/logo-sm.webp" alt="The Urban Vapory" width="180" height="121"></a>
     <nav class="nav" aria-label="Main">${navLinks}</nav>
@@ -243,7 +243,7 @@ function chromeBottom() {
     <div class="dh"><h3>Your bag</h3><button class="x" data-close aria-label="Close">${I.x}</button></div>
     <div class="db"></div>
     <div class="df">
-      <div class="seg${CONFIG.partnerName ? " three" : ""}" id="d-mode" role="group" aria-label="How do you want it?"><button data-m="collect">Collect</button><button data-m="deliver">Courier (SA)</button>${CONFIG.partnerName ? `<button data-m="waves">${CONFIG.partnerName}</button>` : ""}</div>
+      <div class="seg${CONFIG.partnerName ? " three" : ""}" id="d-mode" role="group" aria-label="How do you want it?"><button data-m="collect">Collect</button><button data-m="deliver">Delivery</button>${CONFIG.partnerName ? `<button data-m="waves">${CONFIG.partnerName}</button>` : ""}</div>
       <div class="wavebox" id="d-wave" hidden><b>Want it fast? Order through 7Waves</b><span>7Waves is our delivery partner. Same prices as the shop, brought to your door. Copy your bag, open 7Waves and order the same items there.</span>
         <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-sm btn-line" id="d-copy">Copy my list</button><a class="btn btn-sm btn-wave" id="d-wave-go" target="_blank" rel="noopener">Open 7Waves ${I.out}</a></div></div>
       <div class="field pickup"><label for="d-name">Your name</label><input id="d-name" autocomplete="name" placeholder="Name and surname"></div>

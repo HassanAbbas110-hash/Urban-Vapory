@@ -508,3 +508,29 @@ header.hdr .wrap{padding-inline:18px}
 .rev .q{font-family:var(--head)}
 .soc{border-radius:24px}
 .dopt h3,.way h3,.cat h3{text-transform:none}
+
+/* 7Waves partner: their black and lime */
+.wv-logo{width:52px;height:52px;border-radius:14px;box-shadow:0 0 0 1px rgba(204,255,0,.25),0 10px 24px -10px rgba(204,255,0,.45)}
+.wv-logo.lg{width:84px;height:84px;border-radius:22px;flex:none}
+.dopt.wv,.way.wv,.paper .way.wv{background:linear-gradient(150deg,#16180c,#0a0a0d 70%)!important;border-color:rgba(204,255,0,.35)!important}
+.dopt.wv:hover{border-color:#ccff00!important}
+.dopt.wv .pill{background:#ccff00;color:#0a0a0d}
+.way.wv .wv-logo{margin-bottom:6px}
+.btn-wave,.wv-btn{background:#ccff00;color:#0a0a0d;box-shadow:0 10px 28px -10px rgba(204,255,0,.6)}
+.btn-wave:hover,.wv-btn:hover{background:#e0ff4d}
+.wavebox{background:linear-gradient(150deg,#16180c,#0a0a0d);border-color:rgba(204,255,0,.35);color:#e4ecc4}
+.wv-band{position:relative;overflow:hidden;display:flex;align-items:center;gap:22px 30px;flex-wrap:wrap;padding:clamp(22px,4vw,40px);border-radius:28px;background:radial-gradient(ellipse 50% 90% at 100% 50%,rgba(204,255,0,.16),transparent 70%),linear-gradient(120deg,#121409,#09090c 60%);border:1px solid rgba(204,255,0,.3);transition:border-color .3s,transform .3s var(--ease)}
+.wv-band:hover{border-color:#ccff00;transform:translateY(-3px)}
+.wv-band::after{content:"";position:absolute;inset:auto -10% -60% auto;width:340px;height:340px;border-radius:50%;border:1px solid rgba(204,255,0,.15);box-shadow:0 0 0 40px rgba(204,255,0,.03),0 0 0 80px rgba(204,255,0,.02);pointer-events:none}
+.wv-txt{flex:1;min-width:240px}
+.wv-kick{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#ccff00}
+.wv-band h2{font-size:clamp(28px,3.4vw,42px);margin:8px 0 8px}
+.wv-band h2 span{color:#ccff00;text-shadow:0 0 18px rgba(204,255,0,.4)}
+.wv-band p{color:#b9bfa8;max-width:560px;font-size:15px}
+.wv-btn{position:relative;z-index:1}
+.wv-btn svg{width:16px;height:16px}
+.b-ways .dopts{grid-template-columns:repeat(3,1fr)}
+.b-ways .dopt{padding:22px}
+.b-ways .dopt h3{font-size:24px}
+@media (max-width:700px){.b-ways .dopts{grid-template-columns:1fr}.wv-logo.lg{width:64px;height:64px;border-radius:18px}}
+.bento .wv-logo{width:52px;height:52px;object-fit:contain}

@@ -149,7 +149,7 @@
   <div class="wrap hx-in">
     <span class="tag fade">Jan Smuts Ville · Boksburg</span>
     <h1><span class="w"><span>Good</span></span> <span class="w"><span>vibes</span></span> <span class="script">only</span></h1>
-    <p class="lead fade d1">A vape shop on Rietfontein Road in Jan Smuts Ville, Boksburg. Mods, tanks and a whole wall of juices. Pop in, or order here and collect at the shop.</p>
+    <p class="lead fade d1">A vape shop on Rietfontein Road in Jan Smuts Ville, Boksburg. Mods, tanks and a whole wall of juices. Pop in, order here and collect, or get it to your door with <b>7Waves</b>.</p>
     <div class="ctas fade d2">
       <a class="btn btn-red" href="shop.html">Shop what's in stock <span data-i="arrow"></span></a>
       <a class="btn btn-line" href="#finder">Find my flavour</a>
@@ -187,11 +187,21 @@
       <div class="b-ways">
         <div class="dopts">
           <div class="dopt rv"><span class="pill">Free</span><div class="ic" data-ic="pin"></div><h3>Collect</h3><p>Order here, we pack it, you grab it at Jan Smuts Ville. Bring your ID.</p></div>
-          <div class="dopt rv"><span class="pill">Just ask</span><div class="ic" data-ic="truck"></div><h3>Delivery</h3><p>Want it delivered? WhatsApp us your address and we'll tell you what's possible and what it costs before you pay.</p></div>
-          <a class="dopt wv rv" data-f="partner" id="wave-card" target="_blank" rel="noopener"><span class="pill">Fast local</span><div class="ic" data-ic="out"></div><h3>7Waves</h3><p>Our delivery partner brings it to your door, at shop prices. Tap to open 7Waves.</p></a>
+          <div class="dopt rv"><span class="pill">Further out</span><div class="ic" data-ic="truck"></div><h3>Delivery</h3><p>Outside the 7Waves area? WhatsApp us your address and we'll tell you what's possible and what it costs before you pay.</p></div>
+          <a class="dopt wv rv" data-f="partner" id="wave-card" target="_blank" rel="noopener"><span class="pill">Fast local</span><img class="wv-logo" src="assets/img/7waves.svg" alt="7Waves" width="52" height="52"><h3>7Waves</h3><p>Our delivery partner. Shop prices, at your door in under 60 minutes. Tap to order.</p></a>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0" data-f="partner">
+  <div class="wrap">
+    <a class="wv-band rv" id="wave-band" target="_blank" rel="noopener">
+      <img class="wv-logo lg" src="assets/img/7waves.svg" alt="7Waves" width="84" height="84">
+      <div class="wv-txt"><span class="wv-kick">Delivery partner</span><h2>Urban Vapory, at your door in <span>under 60 min</span></h2><p>Order through 7Waves for fast local delivery. Shop prices, no app markup, and ID checked at your door.</p></div>
+      <span class="btn wv-btn">Order on 7Waves <span data-i="out"></span></span>
+    </a>
   </div>
 </section>
 
@@ -237,6 +247,7 @@ $$("[data-i]").forEach((el) => (el.outerHTML = I[el.dataset.i]));
 $$("[data-ic]").forEach((el) => (el.innerHTML = I[el.dataset.ic]));
 $("#dir-btn").href = mapsLink;
 $("#wave-card").href = waveLink();
+$("#wave-band").href = waveLink();
 $("#fitchips").innerHTML = ["XROS", "XLIM", "Nord 5", "Caliburn G2", "Drag X PnP", "Argus", "Aegis Boost", "Vinci 3"].map((d) => `<span>${d}</span>`).join("") + "<span>+57 more</span>";
 
 const fmt = (n) => n.toLocaleString("en-ZA").replace(/ /g, " ");
