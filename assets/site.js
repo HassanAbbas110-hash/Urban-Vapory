@@ -184,7 +184,7 @@ function sendOrder() {
   const total = cart.reduce((s, l) => s + l.p * l.q, 0);
   const lines = cart.map((l) => `• ${l.q} x ${l.n}${l.opt ? ` [${optText(l)}]` : ""} (${R(l.p * l.q)})`).join("\n");
   const asks = cart.some((l) => l.req) ? "\n\nPlease confirm the strengths marked \"on request\"." : "";
-  const msg = `Hi Urban Vapory, I'd like to order:\n\n${lines}\n\nTotal: ${R(total)}\n${fulfil === "deliver" ? `Courier to: ${addr.value.trim()}` : "I'll collect at Jan Smuts Ville"}\nName: ${name.value.trim()}${$("#d-note").value.trim() ? "\nNote: " + $("#d-note").value.trim() : ""}${asks}`;
+  const msg = `Hi Urban Vapory, I'd like to order:\n\n${lines}\n\nTotal: ${R(total)}\n${fulfil === "deliver" ? `Deliver to: ${addr.value.trim()}` : "I'll collect at Jan Smuts Ville"}\nName: ${name.value.trim()}${$("#d-note").value.trim() ? "\nNote: " + $("#d-note").value.trim() : ""}${asks}`;
   store.set("cv_name", name.value.trim());
   window.open(wa(msg), "_blank", "noopener");
 }
